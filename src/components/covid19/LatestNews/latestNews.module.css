@@ -1,0 +1,13 @@
+.newsContainer{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.link{
+   color: rgb(177, 151, 48);
+    text-decoration: none;
+}
+.icons{
+    margin-top: 20px;
+    color :red;
+}

@@ -1,0 +1,37 @@
+.maxConfirmed{
+    display: flex;
+
+    width:1920px
+     
+}
+.Ul{
+    width: 1920px;
+}
+.countryLi{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+
+}
+.countryLi:last-child{
+    margin-right: 0px;
+}
+.country{
+    color: red;
+}
+.info{
+    color: #bbb8b8;
+}
+.latestNewsDiv{
+    color:#ffffff
+}
+.infoFirst{
+    color: #0000ff;
+}
+.infoSecond{
+    color: #ff0000;
+}
+.infoThird{
+    color: #008000
+}

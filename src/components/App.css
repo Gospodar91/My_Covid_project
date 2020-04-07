@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0 auto;
+    font-family: 'Copse';
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  li {
+    text-decoration-style: none;
+    list-style-type: none;
+  }
+  .MuiPaper-root{
+ background-color: rgba(114, 114, 113, 0.8) !important;
+  }
+  .MuiTypography-body2{
+font-weight: 700 !important;
+color: rgb(197, 187, 187) !important;
+
+  }
+  .MuiTypography-root{
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Noto Serif', serif;
+  }
