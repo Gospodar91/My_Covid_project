@@ -43,3 +43,8 @@ color: rgb(197, 187, 187) !important;
     font-style: italic;
     font-family: 'Noto Serif', serif;
   }
+  .formDiv{
+    margin: 0 auto;
+    background: rgb(122, 115, 115);
+    font-size: 20px;
+  }

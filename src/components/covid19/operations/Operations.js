@@ -5,32 +5,24 @@ export const operations = {
   async getSummary() {
     try {
       const data = await axios.get(`https://api.covid19api.com/summary`);
-
+      console.log("SUMMURYDATA", data);
       return data;
     } catch (error) {
       console.log("GetSummaryError", error);
       throw new Error();
     }
   },
-  async getLiveInfo(searchQuery) {
-    try {
-      const data = await axios.get(
-        `https://api.covid19api.com/live/country/${searchQuery}/status/confirmed`
-      );
 
-      return data;
-    } catch (error) {
-      console.log("GetQueryError", error);
-      throw new Error();
-    }
-  },
 
   async getFlag(searchQuery) {
     try {
       const data = await axios.get(
         `https://pixabay.com/api/?key=${KEY}&q=${searchQuery}+flag&per+page=3&image_type=photo`
       );
-      console.log("data", data);
+      if(data.data.total===0){
+        console.log("dataFlag");
+      }
+    
       return data;
     } catch (error) {
       console.log("GetSummaryError", error);
@@ -43,7 +35,9 @@ export const operations = {
       const data = await axios.get(
         `http://newsapi.org/v2/everything?qInTitle=covid&language=en&pageSize=5&sortBy=publishedAt&apiKey=${newsKey}`
       );
+     
       return data;
+      
     } catch (error) {
       console.log("GetNewsError", error);
       throw new Error();
@@ -54,7 +48,7 @@ export const operations = {
     try {
       const data = await axios.get(
         `http://newsapi.org/v2/everything?qInTitle=covid+${country}&pageSize=5&sortBy=publishedAt&apiKey=${newsKey}`
-      );
+      );  console.log("DATA NEWS", data);
       return data;
     } catch (error) {
       console.log("GetNewsError", error);

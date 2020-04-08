@@ -12,6 +12,9 @@ class SearhPage extends Component {
     flagQuery: null,
     newsData: null,
   };
+
+ 
+  
   async componentDidUpdate(prevProps, prevState) {
     if (prevState.searchQuery !== this.state.searchQuery) {
       await operations.getSummary().then((data) =>
@@ -31,8 +34,10 @@ class SearhPage extends Component {
       await operations
         .getSearchnews(this.state.searchQuery)
         .then((data) => this.setState({ newsData: data.data.articles }));
+      
+      }
     }
-  }
+ 
 
   getQueryonSubmit = async (e) => {
     e.preventDefault();

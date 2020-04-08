@@ -11,6 +11,7 @@
     "axios": "^0.19.2",
     "gh-pages": "^2.2.0",
     "moment": "^2.24.0",
+    "pnotify": "^5.0.0-alpha.7",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -46,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@pnotify/core": "^5.0.0-alpha.7",
     "json-loader": "^0.5.7",
     "redux-devtools-extension": "^2.13.8"
   }

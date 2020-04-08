@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     maxWidth: 345,
   },
   media: {
-    height: 120,
+    height: 200,
   },
 });
 
@@ -22,6 +22,9 @@ const LatestNews = ({ newsData }) => {
   const classes = useStyles();
   return (
     <>
+     {newsData &&
+    <h2 className={css.title}>Latest news</h2>}
+    
       <div className={css.newsContainer}>
         {newsData &&
           newsData.map((news) => (
@@ -46,7 +49,7 @@ const LatestNews = ({ newsData }) => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary">
+                <Button variant="contained" color="primary">
                   <a className={css.link} href={news.url}>
                     Learn More
                   </a>
@@ -55,6 +58,7 @@ const LatestNews = ({ newsData }) => {
             </Card>
           ))}
       </div>
+     
 
       <div className={css.icons}>
         Icons made by{" "}
