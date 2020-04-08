@@ -41,16 +41,15 @@ class SearhPage extends Component {
     });
   };
   render() {
-    console.log("this.state.news", this.state.newsData);
     const { searchinfo, flagQuery } = this.state;
     return (
-      // <div className={css.background}>
+    
       <>
         <SearchForm getQueryonSubmit={this.getQueryonSubmit} />
         <SearchFormResult searchinfo={searchinfo} flagQuery={flagQuery} />
         <LatestNews newsData={this.state.newsData} />
       </>
-      // </div>
+      
     );
   }
 }

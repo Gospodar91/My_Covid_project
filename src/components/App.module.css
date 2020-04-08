@@ -10,5 +10,6 @@ object-fit: cover;
 box-sizing: border-box;
 background-repeat: no-repeat;
 background-size: cover;
+min-height:1000px;
 
 }

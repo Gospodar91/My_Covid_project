@@ -1,13 +1,14 @@
-.link{
+.link {
     display: block;
     width: 100%;
     height: 100%;
 }
-.homePageContainer{
+
+.homePageContainer {
     margin: 0 auto;
     width: 900px;
     padding-top: 20px;
-    background-color: rgba(36, 34, 34,0.5);
+    background-color: rgba(36, 34, 34, 0.5);
     color: rgb(223, 134, 61);
     font-family: 'Copse';
     font-style: normal;
@@ -15,11 +16,13 @@
     padding-bottom: 30px;
     margin-bottom: 40px;
 }
-.covidTitle{
+
+.covidTitle {
     position: relative;
     font-weight: 400;
 }
-.covidTitle::before{
+
+.covidTitle::before {
     position: absolute;
     content: '';
     display: block;
@@ -31,7 +34,8 @@
     background-repeat: no-repeat;
     /* background-color: red; */
 }
-.covidTitle::after{
+
+.covidTitle::after {
     position: absolute;
     content: '';
     display: block;
@@ -43,19 +47,23 @@
     background-repeat: no-repeat;
     /* background-color: red; */
 }
-.totalCasesContainer{
+
+.totalCasesContainer {
     font-size: 20px;
-  
+
 
 }
-.totalCasesTitle{
+
+.totalCasesTitle {
     font-weight: normal;
 }
-.dead{
+
+.dead {
     color: red;
-    
+
 }
-.totConfirmed::after{
+
+.totConfirmed::after {
     display: block;
     content: '';
     margin: 0 auto;
@@ -64,14 +72,28 @@
     /* width: auto; */
     color: red;
     /* height: 5px */
-    
+
 }
-.alive{
-    color: green
-    ;
+
+.alive {
+    color: green;
 }
-.confirm{
+
+.confirm {
     color: blue;
+}
+
+
+.liveInfoContainer {
+    position: relative;
+}
+
+.countryImage {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0%;
+    left: 27%;
 }
 
 /* <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */

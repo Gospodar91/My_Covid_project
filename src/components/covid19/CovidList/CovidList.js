@@ -16,7 +16,6 @@ class CovidList extends Component {
       .getSummary()
       .then((data) => this.setState({ summaryAray: data.data.Countries }));
     await this.TotalStat();
-    // await operations.getFlag('spain')
   }
 
   TotalStat = () => {
