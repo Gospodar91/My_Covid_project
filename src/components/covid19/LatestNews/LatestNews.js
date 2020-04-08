@@ -22,11 +22,9 @@ const LatestNews = ({ newsData }) => {
   const classes = useStyles();
   return (
     <>
-     {newsData &&
-    <h2 className={css.title}>Latest news</h2>}
-    
       <div className={css.newsContainer}>
         {newsData &&
+          ((<h2 className={css.title}>Latest news</h2>),
           newsData.map((news) => (
             <Card key={news.title} className={classes.root}>
               <CardActionArea>
@@ -56,9 +54,8 @@ const LatestNews = ({ newsData }) => {
                 </Button>
               </CardActions>
             </Card>
-          ))}
+          )))}
       </div>
-     
 
       <div className={css.icons}>
         Icons made by{" "}

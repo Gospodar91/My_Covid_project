@@ -16,8 +16,35 @@ class SearhPage extends Component {
  
   
   async componentDidUpdate(prevProps, prevState) {
-    if (prevState.searchQuery !== this.state.searchQuery) {
-      await operations.getSummary().then((data) =>
+    // if (prevState.searchQuery !== this.state.searchQuery) {
+    //   await operations.getSummary().then((data) =>
+    //     this.setState({
+    //       searchinfo: data.data.Countries.find(
+    //         (country) =>
+    //           country.Country.toLowerCase() ===
+    //           this.state.searchQuery.toLowerCase()
+    //       ),
+    //     })
+    //   );
+
+    //   await operations
+    //     .getFlag(this.state.searchQuery)
+    //     .then((data) => this.setState({ flagQuery: data.data.hits }));
+
+    //   await operations
+    //     .getSearchnews(this.state.searchQuery)
+    //     .then((data) => this.setState({ newsData: data.data.articles }));
+      
+    //   }
+    }
+ 
+
+  getQueryonSubmit = async (e) => {
+    e.preventDefault();
+    await this.setState({
+      searchQuery: e.target.elements[0].value,
+    });
+        await operations.getSummary().then((data) =>
         this.setState({
           searchinfo: data.data.Countries.find(
             (country) =>
@@ -33,19 +60,11 @@ class SearhPage extends Component {
 
       await operations
         .getSearchnews(this.state.searchQuery)
-        .then((data) => this.setState({ newsData: data.data.articles }));
-      
-      }
-    }
- 
-
-  getQueryonSubmit = async (e) => {
-    e.preventDefault();
-    await this.setState({
-      searchQuery: e.target.elements[0].value,
-    });
+        .then((data) => this.setState({ newsData: data.data.articles,searchQuery:"" }));
+       
   };
   render() {
+    console.log('this.state.searchQuery', this.state.searchQuery)
     const { searchinfo, flagQuery } = this.state;
     return (
     

@@ -36,8 +36,7 @@ html {
   .MuiTypography-body2{
 font-weight: 700 !important;
 color: rgb(197, 187, 187) !important;
-
-  }
+ }
   .MuiTypography-root{
     font-weight: bold;
     font-style: italic;
@@ -48,3 +47,10 @@ color: rgb(197, 187, 187) !important;
     background: rgb(122, 115, 115);
     font-size: 20px;
   }
+
+        .ui-pnotify-container{
+          background-color: red;
+
+        }
+ 
+ 

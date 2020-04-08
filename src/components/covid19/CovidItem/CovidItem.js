@@ -4,8 +4,11 @@ import css from "../CovidItem/covidItem.module.css";
 const CovidItem = ({ maxConfirmed, maxDead, totalRecovered }) => {
   console.log("maxDead", maxDead);
   return (
+    <> 
+    {maxConfirmed&&
     <>
       <div>
+       
         <h2 className={css.infoFirst}> Top Total Cases</h2>
         <ul className={css.maxConfirmed}>
           {maxConfirmed.map((country) => (
@@ -30,7 +33,9 @@ const CovidItem = ({ maxConfirmed, maxDead, totalRecovered }) => {
                 <p className={css.infoThird}>
                   New recovered:{country.NewRecovered.toLocaleString()}
                 </p>
+          
               </div>
+              
 
               <div className={css.latestNewsDiv}></div>
             </li>
@@ -104,6 +109,8 @@ const CovidItem = ({ maxConfirmed, maxDead, totalRecovered }) => {
           ))}
         </ul>
       </div>
+      </>
+    }
     </>
   );
 };

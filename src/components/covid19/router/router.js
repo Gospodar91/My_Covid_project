@@ -4,7 +4,7 @@ import React, { lazy, Suspense } from "react";
 export const useRouter = () => {
   const SearchPage = lazy(() => import("../Searchform/SearchPage"));
   const CovidList = lazy(() => import("../CovidList/CovidList"));
-  const HomePage = lazy(() => import("../../homePage/HomepAge"));
+  const HomePage = lazy(() => import("../homePage/HomepAge"));
   return (
     <>
       <Switch>

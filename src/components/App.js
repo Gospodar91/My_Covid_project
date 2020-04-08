@@ -5,7 +5,9 @@ import "./App.css";
 import "../assets/fonts/fonts.css";
 
 const App = () => {
+
   return (
+    
     <div className={css.background}>
       <Covid19 />
     </div>
