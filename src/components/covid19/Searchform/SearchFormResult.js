@@ -1,5 +1,4 @@
 import React from 'react'
-// import css from './searchForm.module.css'
 import css from '../homePage/homepage.module.css'
 
  export const SearchFormResult=({searchinfo,flagQuery})=>

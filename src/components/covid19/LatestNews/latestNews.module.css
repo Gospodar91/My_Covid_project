@@ -1,6 +1,8 @@
 .newsContainer{
     display: flex;
     justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
    
 }
 .link{
@@ -13,4 +15,7 @@
 }
 .title{
     color: red;
+}
+.root{
+    margin-right: 10px;
 }

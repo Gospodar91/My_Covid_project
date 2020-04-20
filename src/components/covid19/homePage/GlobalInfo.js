@@ -1,7 +1,7 @@
 import React from "react";
 import css from "../homePage/homepage.module.css";
 
-export const GlobalInfo = ({ Global, Date }) => {
+export const GlobalInfo = ({ Global }) => {
   return (
     <>
       {Global && (
@@ -12,43 +12,46 @@ export const GlobalInfo = ({ Global, Date }) => {
             <p className={css.totConfirmed}>
               Total Confirmed:
               <span className={css.confirm}>
-                {Global.TotalConfirmed.toLocaleString()}
+                {Global.Global.TotalConfirmed.toLocaleString()}
               </span>
             </p>
             <p className={css.totConfirmed}>
               New Confirmed cases :
               <span className={css.confirm}>
-                {Global.NewConfirmed.toLocaleString()}
+                {Global.Global.NewConfirmed.toLocaleString()}
               </span>
             </p>
             <p className={css.totConfirmed}>
               Total Deaths :
               <span className={css.dead}>
-                {Global.TotalDeaths.toLocaleString()}
+                {Global.Global.TotalDeaths.toLocaleString()}
               </span>
             </p>
             <p className={css.totConfirmed}>
               New Deaths :
               <span className={css.dead}>
-                {Global.NewDeaths.toLocaleString()}
+                {Global.Global.NewDeaths.toLocaleString()}
               </span>
             </p>
             <p className={css.totConfirmed}>
               Total Recovered :
               <span className={css.alive}>
-                {Global.TotalRecovered.toLocaleString()}
+                {Global.Global.TotalRecovered.toLocaleString()}
               </span>
             </p>
             <p className={css.totConfirmed}>
               New Recovered :
               <span className={css.alive}>
-                {Global.NewRecovered.toLocaleString()}
+                {Global.Global.NewRecovered.toLocaleString()}
               </span>
             </p>
             <p className={css.totConfirmed}>
-              Last updated at :{`${Date.substring(0, 10)} ${Date.substring(11, 19)}`} UTC
-             
-              
+              Last updated at :
+              {`${Global.Date.substring(0, 10)} ${Global.Date.substring(
+                11,
+                19
+              )}`}{" "}
+              UTC
             </p>
           </div>
         </div>

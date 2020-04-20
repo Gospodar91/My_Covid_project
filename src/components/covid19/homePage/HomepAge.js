@@ -1,33 +1,30 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import { operations } from "../operations/Operations";
 import LatestNews from "../LatestNews/LatestNews";
 import { GlobalInfo } from "./GlobalInfo";
-
-class HomePage extends Component {
-  state = {
-    globalInfo: [],
-    newsData: [],
+export const HomePage = () => {
+  const [globalState, setGlobalState] = useState();
+  const [newsState, setNewsState] = useState();
+  const getNews = () => {
+     operations.getNews().then((data) => setNewsState(data.data.articles));
   };
-
-  async componentDidMount() {
-    await operations
-      .getSummary()
-      .then((data) => this.setState({ globalInfo: data.data }));
-
-    await operations
-      .getNews()
-      .then((data) => this.setState({ newsData: data.data.articles }));
-  }
-
-  render() {
-    const { newsData } = this.state;
-    const { Global, Date } = this.state.globalInfo;
-    return (
-      <>
-        <GlobalInfo Global={Global} Date={Date} />
-        <LatestNews newsData={newsData} />
-      </>
-    );
-  }
-}
-export default HomePage;
+  const getGlobalData =  () => {
+     operations.getSummary().then((data) => setGlobalState(data.data));
+  };
+  useEffect(() => {
+    getGlobalData();
+  }, []);
+  useEffect(() => {
+    getNews();
+  }, []);
+  return (
+    <>
+      {globalState && newsState && (
+        <>
+          <GlobalInfo Global={globalState} />
+          <LatestNews newsData={newsState} />
+        </>
+      )}
+    </>
+  );
+};

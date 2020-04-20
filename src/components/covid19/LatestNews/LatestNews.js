@@ -8,30 +8,36 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import { v4 as uuidv4 } from "uuid";
+
+
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
   },
   media: {
-    height: 200,
+    height: 220,
   },
 });
+
+
 
 const LatestNews = ({ newsData }) => {
   const classes = useStyles();
   return (
     <>
+      {newsData && <h2 className={css.title}>Latest news</h2>}
+
       <div className={css.newsContainer}>
         {newsData &&
-          ((<h2 className={css.title}>Latest news</h2>),
           newsData.map((news) => (
-            <Card key={news.title} className={classes.root}>
+            <Card key={uuidv4()} className={classes.root}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image={news.urlToImage}
-                  title="Not Available"
+                  image={news.urlToImage||'https://image.flaticon.com/icons/svg/2780/2780120.svg'}
+                  title="Image Not Available"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -54,7 +60,7 @@ const LatestNews = ({ newsData }) => {
                 </Button>
               </CardActions>
             </Card>
-          )))}
+          ))}
       </div>
 
       <div className={css.icons}>

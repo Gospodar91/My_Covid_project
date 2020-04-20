@@ -1,57 +1,38 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import CovidItem from "../CovidItem/CovidItem";
 import { operations } from "../operations/Operations";
-
 import css from "./covidList.module.css";
-class CovidList extends Component {
-  state = {
-    summaryAray: [],
-    maxConfirmed: [],
-    maxDead: [],
-    totalRecovered: [],
+export const CovidList = () => {
+  useEffect(() => {
+    getSummaryArray();
+  }, []);
+  const [summaryAray, setSummaryArry] = useState();
+  const getSummaryArray = () => {
+    operations.getSummary().then((data) => setSummaryArry(data.data.Countries));
   };
-
-  async componentDidMount() {
-    await operations
-      .getSummary()
-      .then((data) => this.setState({ summaryAray: data.data.Countries }));
-    await this.TotalStat();
-  }
-
-  TotalStat = () => {
-    const maxConfirmed = this.state.summaryAray
+  let maxConfirmed, maxDead, totalRecovered;
+  if (summaryAray) {
+    maxConfirmed = summaryAray
       .sort((b, a) => a.TotalConfirmed - b.TotalConfirmed)
       .slice([0], [5]);
-    const maxDead = this.state.summaryAray
+    maxDead = summaryAray
       .sort((b, a) => a.TotalDeaths - b.TotalDeaths)
       .slice([0], [5]);
-    const totalRecovered = this.state.summaryAray
+    totalRecovered = summaryAray
       .sort((b, a) => a.TotalRecovered - b.TotalRecovered)
       .slice([0], [5]);
-    this.setState({
-      maxConfirmed: maxConfirmed,
-      maxDead: maxDead,
-      totalRecovered: totalRecovered,
-    });
-  };
-
-  render() {
-    const { summaryAray, maxConfirmed, maxDead, totalRecovered } = this.state;
-
-    console.log("summaryAray", summaryAray);
-    return (
-      <>
-        <div className={css.container}>
-          <div className={css.div_wrapper}>
-            <CovidItem
-              maxConfirmed={maxConfirmed}
-              maxDead={maxDead}
-              totalRecovered={totalRecovered}
-            />
-          </div>
-        </div>
-      </>
-    );
   }
-}
-export default CovidList;
+  return (
+    <>
+      <div className={css.container}>
+        <div className={css.div_wrapper}>
+          <CovidItem
+            maxConfirmed={maxConfirmed}
+            maxDead={maxDead}
+            totalRecovered={totalRecovered}
+          />
+        </div>
+      </div>
+    </>
+  );
+};

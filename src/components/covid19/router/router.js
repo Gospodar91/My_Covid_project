@@ -1,18 +1,16 @@
 import { Route, Switch, Redirect } from "react-router-dom";
-import React, { lazy, Suspense } from "react";
+import React from "react";
+import { HomePage } from "../homePage/HomepAge";
+import { CovidList } from "../CovidList/CovidList";
+import SearhPage from "../Searchform/SearchPage";
 
 export const useRouter = () => {
-  const SearchPage = lazy(() => import("../Searchform/SearchPage"));
-  const CovidList = lazy(() => import("../CovidList/CovidList"));
-  const HomePage = lazy(() => import("../homePage/HomepAge"));
   return (
     <>
       <Switch>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Route exact path="/home" component={HomePage} />
-          <Route path="/searh_page/" component={SearchPage} />
-          <Route exact path="/topFive" component={CovidList} />
-        </Suspense>
+        <Route exact path="/home" component={HomePage} />
+        <Route path="/searh_page/" component={SearhPage} />
+        <Route exact path="/topFive" component={CovidList} />
       </Switch>
       <Redirect to="/home" />
     </>
