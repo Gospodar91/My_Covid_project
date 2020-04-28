@@ -44,7 +44,7 @@ const Covid19=()=>{
                   fontWeight: "500"
                 }}
               >
-                SearchInfo
+                Search Info
               </NavLink>
             </li>
             <li className={css.linkItem}>

@@ -16,7 +16,7 @@ export const GlobalInfo = ({ Global }) => {
               </span>
             </p>
             <p className={css.totConfirmed}>
-              New Confirmed cases :
+              Today Confirmed Cases:
               <span className={css.confirm}>
                 {Global.Global.NewConfirmed.toLocaleString()}
               </span>
@@ -28,7 +28,7 @@ export const GlobalInfo = ({ Global }) => {
               </span>
             </p>
             <p className={css.totConfirmed}>
-              New Deaths :
+              Today Deaths :
               <span className={css.dead}>
                 {Global.Global.NewDeaths.toLocaleString()}
               </span>
@@ -40,7 +40,7 @@ export const GlobalInfo = ({ Global }) => {
               </span>
             </p>
             <p className={css.totConfirmed}>
-              New Recovered :
+              Today Recovered :
               <span className={css.alive}>
                 {Global.Global.NewRecovered.toLocaleString()}
               </span>

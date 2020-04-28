@@ -2,7 +2,8 @@ import axios from "axios";
 import PNotify from "pnotify/dist/es/PNotify.js";
 const KEY = "15302072-a81be31270c5e4995077a81d4";
 const newsKey = "65cb0b3a150c4ecfb6031d583c73fa16";
-PNotify.defaults.delay = 1800;
+PNotify.defaults.delay = 2000;
+PNotify.defaults.width = '150px';
 export const operations = {
   async getSummary() {
     try {
@@ -54,6 +55,7 @@ export const operations = {
       if (data.data.totalResults === 0) {
         PNotify.error({ title: "Sorry:", text: "News are unavailable now" });
       }
+      console.log('data', data)
       return data;
     } catch (error) {
       console.log("GetNewsError", error);

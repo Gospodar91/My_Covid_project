@@ -1,9 +1,17 @@
 .newsContainer{
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    width: 280px;
     margin: 0 auto;
+    flex-wrap: wrap;
    
+}
+.cardDiv{
+    margin-bottom: 40px;
+    width: 280px;
+}
+.cardDiv:last-child{
+    margin-bottom: 20px;
 }
 .link{
    color: rgb(177, 151, 48);
@@ -18,4 +26,31 @@
 }
 .root{
     margin-right: 10px;
+}
+
+@media(min-width:768px){
+    .newsContainer{
+        width: 700px;  
+    }
+    .cardDiv{
+        width: 220px;
+        margin-bottom: 0px;
+    }
+    .cardDiv:last-child{
+        margin-bottom: 0px;
+    }
+}
+
+@media(min-width:1400px){
+    .newsContainer{
+        width: 1200px;  
+    }
+ 
+  .cardDiv{
+      width: 345px;
+    margin-bottom: 0px;
+}
+.cardDiv:last-child{
+    margin-bottom: 0px;
+}
 }

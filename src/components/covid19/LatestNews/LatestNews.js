@@ -14,7 +14,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    width: "100%",
   },
   media: {
     height: 220,
@@ -32,7 +32,8 @@ const LatestNews = ({ newsData }) => {
       <div className={css.newsContainer}>
         {newsData &&
           newsData.map((news) => (
-            <Card key={uuidv4()} className={classes.root}>
+            <div key={uuidv4()} className={css.cardDiv}>
+            <Card  className={classes.root}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
@@ -60,6 +61,7 @@ const LatestNews = ({ newsData }) => {
                 </Button>
               </CardActions>
             </Card>
+            </div>
           ))}
       </div>
 

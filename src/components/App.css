@@ -31,25 +31,32 @@ html {
   }
   .MuiPaper-root{
  background-color: rgba(114, 114, 113, 0.8) !important;
+ color: rgb(99, 11, 11) !important;
   }
   .MuiTypography-body2{
 font-weight: 700 !important;
 color: rgb(197, 187, 187) !important;
  }
   .MuiTypography-root{
-    font-weight: bold;
-    font-style: italic;
-    font-family: 'Noto Serif', serif;
+    font-weight: bold !important;
+    font-style: italic !important;
+    font-family: 'Noto Serif', serif !important;
+  
   }
+    
   .formDiv{
     margin: 0 auto;
     background: rgb(122, 115, 115);
     font-size: 20px;
   }
 
+
         .ui-pnotify-container{
           background-color: red;
 
         }
+
+
+
  
  

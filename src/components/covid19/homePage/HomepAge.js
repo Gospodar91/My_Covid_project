@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { operations } from "../operations/Operations";
 import LatestNews from "../LatestNews/LatestNews";
 import { GlobalInfo } from "./GlobalInfo";
-export const HomePage = () => {
+ const HomePage = () => {
   const [globalState, setGlobalState] = useState();
   const [newsState, setNewsState] = useState();
   const getNews = () => {
@@ -28,3 +28,4 @@ export const HomePage = () => {
     </>
   );
 };
+export default HomePage;

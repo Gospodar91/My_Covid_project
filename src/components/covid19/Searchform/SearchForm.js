@@ -1,12 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
+import css from './searchForm.module.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiTextField-root": {
       margin: theme.spacing(1),
-      width: 300,
+      width: "100%",
     },
   },
 }));
@@ -15,6 +16,7 @@ const SearchForm = ({ getQueryonSubmit }) => {
   const classes = useStyles();
   return (
     <>
+    <div className={css.SearchFormContainer}>
       <form
         className={classes.root}
         noValidate
@@ -33,6 +35,7 @@ const SearchForm = ({ getQueryonSubmit }) => {
           />
         </div>
       </form>
+      </div>
     </>
   );
 };

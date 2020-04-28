@@ -1,0 +1,27 @@
+.SearchFormContainer{
+    margin: 0 auto;
+    width: 280px;
+    position: relative;
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+.SearchFormContainer::before {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 64px;
+    width: 64px;
+    left: 45%;
+    top: -90%;
+    background-image: url(../../../assets/images/search-small.png);
+    background-repeat: no-repeat;
+  
+}
+@media(min-width:768px)
+{
+    .SearchFormContainer::before{
+        left: 110%;
+        top: 15%;
+
+    }
+}

@@ -1,40 +1,75 @@
-.maxConfirmed{
+.maxConfirmed {
     display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    justify-content: space-between;
+}
 
-    width:1200px
-     
-}
-.Ul{
-    width: 1200px;
-}
-.countryLi{
-    width: 300px;
+.countryLi {
+    width: 220px;
     display: flex;
     justify-content: space-between;
-    margin-right: 50px;
+
 
 }
-.countryLi:last-child{
+
+.countryLi:last-child {
     margin-right: 0px;
 }
-.country{
+
+.country {
     color: red;
 }
-.info{
+
+.info {
     color: #bbb8b8;
 }
-.latestNewsDiv{
-    color:#ffffff
+
+.latestNewsDiv {
+    color: #ffffff
 }
-.infoFirst{
-    color: #0000ff;
+
+.infoFirst {
+    color: #3030bd;
 }
-.infoSecond{
-    color: #ff0000;
+
+.infoSecond {
+    color: #bd1818;
 }
-.infoThird{
-    color: #008000
+
+.infoThird {
+    color: #187418
 }
-.maxConfirmedDiv{
+
+.maxConfirmedDiv {
     padding-bottom: 20px;
+}
+
+@media(min-width: 768px) {
+    .maxConfirmed {
+
+
+        width: 700px
+    }
+
+    .countryLi {
+        width: 220px;
+
+    }
+}
+
+
+@media(min-width: 1400px) {
+    .maxConfirmed {
+
+
+        width: 1200px
+    }
+
+    .countryLi {
+        width: 220px;
+
+
+
+    }
 }

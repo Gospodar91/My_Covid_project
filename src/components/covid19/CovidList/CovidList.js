@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CovidItem from "../CovidItem/CovidItem";
 import { operations } from "../operations/Operations";
 import css from "./covidList.module.css";
-export const CovidList = () => {
+ const CovidList = () => {
   useEffect(() => {
     getSummaryArray();
   }, []);
@@ -36,3 +36,4 @@ export const CovidList = () => {
     </>
   );
 };
+export default CovidList;
