@@ -11,6 +11,10 @@ export const operations = {
       return data;
     } catch (error) {
       console.log("GetSummaryError", error);
+      PNotify.error({
+        title: "Sorry:",
+        text: "Server is overloaded",
+      });
       throw new Error();
     }
   },

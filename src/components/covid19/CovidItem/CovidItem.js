@@ -17,19 +17,19 @@ const CovidItem = ({ maxConfirmed, maxDead, totalRecovered }) => {
                       Total cases:{country.TotalConfirmed.toLocaleString()}
                     </p>
                     <p className={css.infoFirst}>
-                      New cases:{country.NewConfirmed.toLocaleString()}
+                      Today cases:{country.NewConfirmed.toLocaleString()}
                     </p>
                     <p className={css.infoSecond}>
                       Total deaths:{country.TotalDeaths.toLocaleString()}
                     </p>
                     <p className={css.infoSecond}>
-                      New deaths:{country.NewDeaths.toLocaleString()}
+                      Today deaths:{country.NewDeaths.toLocaleString()}
                     </p>
                     <p className={css.infoThird}>
                       Total recovered:{country.TotalRecovered.toLocaleString()}
                     </p>
                     <p className={css.infoThird}>
-                      New recovered:{country.NewRecovered.toLocaleString()}
+                      Today recovered:{country.NewRecovered.toLocaleString()}
                     </p>
                   </div>
 
@@ -50,7 +50,7 @@ const CovidItem = ({ maxConfirmed, maxDead, totalRecovered }) => {
                       {country.TotalDeaths.toLocaleString().toLocaleString()}
                     </p>
                     <p className={css.infoSecond}>
-                      New deaths:
+                      Today deaths:
                       {country.NewDeaths.toLocaleString().toLocaleString()}
                     </p>
                     <p className={css.infoFirst}>
@@ -58,7 +58,7 @@ const CovidItem = ({ maxConfirmed, maxDead, totalRecovered }) => {
                       {country.TotalConfirmed.toLocaleString().toLocaleString()}
                     </p>
                     <p className={css.infoFirst}>
-                      New cases:
+                      Today cases:
                       {country.NewConfirmed.toLocaleString().toLocaleString()}
                     </p>
                     <p className={css.infoThird}>
@@ -66,7 +66,7 @@ const CovidItem = ({ maxConfirmed, maxDead, totalRecovered }) => {
                       {country.TotalRecovered.toLocaleString().toLocaleString()}
                     </p>
                     <p className={css.infoThird}>
-                      New recovered:
+                      Today recovered:
                       {country.NewRecovered.toLocaleString().toLocaleString()}
                     </p>
                   </div>
@@ -86,19 +86,19 @@ const CovidItem = ({ maxConfirmed, maxDead, totalRecovered }) => {
                       Total recovered:{country.TotalRecovered.toLocaleString()}
                     </p>
                     <p className={css.infoThird}>
-                      New recovered:{country.NewRecovered.toLocaleString()}
+                      Today recovered:{country.NewRecovered.toLocaleString()}
                     </p>
                     <p className={css.infoSecond}>
                       Total deaths:{country.TotalDeaths.toLocaleString()}
                     </p>
                     <p className={css.infoSecond}>
-                      New deaths:{country.NewDeaths.toLocaleString()}
+                      Today deaths:{country.NewDeaths.toLocaleString()}
                     </p>
                     <p className={css.infoFirst}>
                       Total cases:{country.TotalConfirmed.toLocaleString()}
                     </p>
                     <p className={css.infoFirst}>
-                      New cases:{country.NewConfirmed.toLocaleString()}
+                      Today cases:{country.NewConfirmed.toLocaleString()}
                     </p>
                   </div>
                 </li>
