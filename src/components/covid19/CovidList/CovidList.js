@@ -12,15 +12,15 @@ import css from "./covidList.module.css";
   };
   let maxConfirmed, maxDead, totalRecovered;
   if (summaryAray) {
-    maxConfirmed = summaryAray
+    maxConfirmed = [...summaryAray
       .sort((b, a) => a.TotalConfirmed - b.TotalConfirmed)
-      .slice([0], [5]);
-    maxDead = summaryAray
+      .slice([0], [5])];
+    maxDead = [...summaryAray
       .sort((b, a) => a.TotalDeaths - b.TotalDeaths)
-      .slice([0], [5]);
-    totalRecovered = summaryAray
+      .slice([0], [5])];
+    totalRecovered = [...summaryAray
       .sort((b, a) => a.TotalRecovered - b.TotalRecovered)
-      .slice([0], [5]);
+      .slice([0], [5])];
   }
   return (
     <>
